@@ -1,11 +1,11 @@
 import React from 'react';
 import {Text, View} from 'react-native';
 
-const Header=()=>{
+const Header=(Props)=>{
   const{textStyle,viewStyle}=styles;
   return (
     <View style={viewStyle}>
-    <Text style={textStyle}> Albums! </Text>
+    <Text style={textStyle}> {Props.headerText}</Text>
     </View>
   );
 };
@@ -14,16 +14,16 @@ const styles={
     fontSize:20
   },
   viewStyle:{
-    backgroundColor:'#F8F8F8',
-    justifyContent:'center',
-    alignItems:'center',
-    height:60,
-    paddingTop:15,
-    shadowColor:'#000',
-    shadowOffset:{width:0,height:2},
-    shadowOpacity:0.9,
-    elevation:2,
-    position:'relative'
+    backgroundColor: '#F8F8F8',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 60,
+    paddingTop: 15,
+    shadowColor: '#000',
+    shadowOffset:{width: 0 ,height:2},
+    shadowOpacity: 0.9,
+    elevation: 2,
+    position: 'relative'
   }
 }
 export default Header;
